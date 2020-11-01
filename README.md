@@ -1,5 +1,7 @@
 # HWEEN 2020 RAVE GUESTBOOK
 
+Site at https://hweenrave2020.surge.sh/
+
 Built in <24 hours with Gatsby, Airtable, React, and a whole lotta nightcore
 
 - Uses Airtable base to store content
