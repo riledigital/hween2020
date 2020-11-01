@@ -1,7 +1,112 @@
+@font-face {
+  font-family: "Daubenton";
+  src: url("../../static/daubentonwebfont.woff") format("woff");
+}
+
+footer {
+  font-size: 16px;
+  text-align: right;
+  padding: 1rem;
+}
+
+a {
+  color: red;
+  animation: slidein 3s linear 1s;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 75vw;
+  margin: auto auto;
+}
+
+.links > * {
+  padding: 1rem;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.75);
+  /* max-height: 10rem; */
+  border-radius: 0.25rem;
+  overflow: hidden;
+  padding: 1rem;
+  margin-left: -0.5rem;
+  box-shadow: -10px 8px 12px -3px rgba(0, 0, 0, 0.58);
+}
+.user-photo {
+  filter: grayscale(100%) sepia(100%) hue-rotate(180deg) brightness(100%);
+  /* filter: ; */
+  max-height: 8rem;
+  width: auto;
+  overflow: hidden;
+}
+.notes {
+  font-size: 1rem;
+  line-height: 1.25;
+  overflow: hidden;
+  font-style: italic;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-gap: 0.2rem;
+}
+/*  */
+.hover-emphasis {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+}
+
+.hover-emphasis:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+/* Pulse */
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes flash {
+  from {
+    text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff,
+      0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
+      0px 0px 25px #fff, 0px 0px 50px #fff, 0px 0px 50px #fff,
+      0px 0px 50px #7b96b8, 0px 0px 40px #7b96b8, 0px 10px 100px #7b96b8,
+      0px 10px 100px #7b96b8, 0px 10px 40px #7b96b8, 0px 10px 100px #7b96b8,
+      0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
+  }
+}
+
+.guestnames {
+  /* animation: flash 2s ease-out infinite; */
+  text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+}
+
+main {
+  display: grid;
+  text-align: center;
+}
+
+html {
+  background-color: black;
+  color: white;
+}
+
+/*  */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
+  font: 36px/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -9,7 +114,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: white;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -18,6 +123,8 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  background-image: url("../images/kenrick-mills-T2C-6wdndPg-unsplash.jpg");
+  background-attachment: fixed;
 }
 article,
 aside,
@@ -81,8 +188,8 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Daubenton", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -260,8 +367,8 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Daubenton", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -277,8 +384,8 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Daubenton", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
